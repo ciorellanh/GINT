@@ -1,0 +1,10 @@
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\Servicios.dll.config
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\Servicios.dll
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\Servicios.pdb
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\AccesoDatos.dll
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\Entidades.dll
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\AccesoDatos.pdb
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\bin\Debug\Entidades.pdb
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\obj\Debug\Servicios.dll
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Servicios\obj\Debug\Servicios.pdb

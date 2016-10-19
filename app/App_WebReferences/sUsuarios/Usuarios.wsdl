@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Usuarios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://lesnxv8malbc2c34.pemex.pmx.com/svcGINT/Servicios.Usuarios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://lesnxv8malbc2c34.pemex.pmx.com/svcGINT/Servicios.Usuarios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://lesnxv8malbc2c34.pemex.pmx.com/svcGINT/Servicios.Usuarios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUsuarios_Nuevo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Nuevo" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_Nuevo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NuevoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_Todos_InputMessage">
+    <wsdl:part name="parameters" element="tns:Todos" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_Todos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_xClave_InputMessage">
+    <wsdl:part name="parameters" element="tns:xClave" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_xClave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:xClaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUsuarios">
+    <wsdl:operation name="Nuevo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/Nuevo" message="tns:IUsuarios_Nuevo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/NuevoResponse" message="tns:IUsuarios_Nuevo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Todos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/Todos" message="tns:IUsuarios_Todos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/TodosResponse" message="tns:IUsuarios_Todos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xClave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/xClave" message="tns:IUsuarios_xClave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/xClaveResponse" message="tns:IUsuarios_xClave_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUsuarios" type="tns:IUsuarios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Nuevo">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/Nuevo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Todos">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/Todos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xClave">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/xClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Usuarios">
+    <wsdl:port name="BasicHttpBinding_IUsuarios" binding="tns:BasicHttpBinding_IUsuarios">
+      <soap:address location="http://lesnxv8malbc2c34.pemex.pmx.com/svcGINT/Servicios.Usuarios.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
