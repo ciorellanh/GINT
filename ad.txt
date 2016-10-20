@@ -1,0 +1,21 @@
+angular.module("myApp", ['ui.bootstrap']).controller("userController", function ($scope, $http, $log) {
+    $scope.fillList = function () {
+        var httpreq = {
+            method: 'POST',
+            url: 'Usuarios.aspx/Consultar_Todos',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8',
+                'dataType': 'json'
+            },
+            data: {}
+        }
+        $http(httpreq).success(function (response) {
+            $scope.lstUsuarios = response.d;
+        })
+    };
+
+    $scope.fillList();
+});
+
+
+Usuarios.aspx/Consultar_Todos

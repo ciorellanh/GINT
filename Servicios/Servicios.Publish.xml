@@ -1,10 +1,10 @@
 <publishData>
   <publishTarget publishUrl="A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\svc\">
-    <file relUrl="bin/Servicios.pdb" publishTime="10/19/2016 12:56:12" />
-    <file relUrl="Servicios.Usuarios.svc" publishTime="10/19/2016 16:10:33" />
-    <file relUrl="bin/Servicios.dll" publishTime="10/19/2016 12:56:12" />
-    <file relUrl="bin/Entidades.pdb" publishTime="10/19/2016 12:53:25" />
+    <file relUrl="Servicios.Usuarios.svc" publishTime="10/20/2016 10:59:21" />
+    <file relUrl="bin/Servicios.pdb" publishTime="10/20/2016 10:04:02" />
+    <file relUrl="bin/Servicios.dll" publishTime="10/20/2016 10:04:02" />
     <file relUrl="bin/Entidades.dll" publishTime="10/19/2016 12:53:25" />
+    <file relUrl="bin/Entidades.pdb" publishTime="10/19/2016 12:53:25" />
     <file relUrl="Web.config" publishTime="10/19/2016 11:32:38" />
     <file relUrl="bin/Servicios.dll.config" publishTime="10/19/2016 11:32:38" />
     <file relUrl="bin/AccesoDatos.pdb" publishTime="10/19/2016 12:53:24" />

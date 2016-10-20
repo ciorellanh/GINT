@@ -7,15 +7,18 @@
     <script src="../Scripts/Angular/angular-messages.js"></script>
     <script src="../Scripts/Angular/angular-aria.js"></script>
     <script src="../Scripts/bootstrap.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+    
 
     <link href="../Styles/bootstrap/css/bootstrap.css" rel="stylesheet" />
 
     <script src="../Scripts/ui-bootstrap-tpls-2.0.0.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
+
     <script src="../Scripts/jsApp/appUsuarios.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div ng-app="myApp" ng-controller="ctrlUsuarios">
+    <div ng-app="myApp" ng-controller="userController">
         <table>
             <thead>
                 <tr>
@@ -57,6 +60,6 @@
             </tbody>
         </table>
     </div>>
-    <!--<asp:GridView ID="GridView1" runat="server"></asp:GridView>-->
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 </asp:Content>
 

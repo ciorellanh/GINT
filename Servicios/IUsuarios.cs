@@ -5,6 +5,7 @@ using System.Text;
 using AccesoDatos;
 using Entidades;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 
 namespace Servicios
 {
