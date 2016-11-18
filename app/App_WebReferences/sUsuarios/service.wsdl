@@ -5,8 +5,15 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entidades" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AccesoDatos" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IUsuarios_ValidaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_ValidaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioResponse" />
+  </wsdl:message>
   <wsdl:message name="IUsuarios_Nuevo_InputMessage">
     <wsdl:part name="parameters" element="tns:Nuevo" />
   </wsdl:message>
@@ -25,7 +32,17 @@
   <wsdl:message name="IUsuarios_xClave_OutputMessage">
     <wsdl:part name="parameters" element="tns:xClaveResponse" />
   </wsdl:message>
+  <wsdl:message name="IUsuarios_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IUsuarios_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUsuarios">
+    <wsdl:operation name="ValidaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/ValidaUsuario" message="tns:IUsuarios_ValidaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/ValidaUsuarioResponse" message="tns:IUsuarios_ValidaUsuario_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Nuevo">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/Nuevo" message="tns:IUsuarios_Nuevo_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/NuevoResponse" message="tns:IUsuarios_Nuevo_OutputMessage" />
@@ -38,9 +55,22 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/xClave" message="tns:IUsuarios_xClave_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/xClaveResponse" message="tns:IUsuarios_xClave_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuarios/Eliminar" message="tns:IUsuarios_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuarios/EliminarResponse" message="tns:IUsuarios_Eliminar_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuarios" type="tns:IUsuarios">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidaUsuario">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/ValidaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="Nuevo">
       <soap:operation soapAction="http://tempuri.org/IUsuarios/Nuevo" style="document" />
       <wsdl:input>
@@ -61,6 +91,15 @@
     </wsdl:operation>
     <wsdl:operation name="xClave">
       <soap:operation soapAction="http://tempuri.org/IUsuarios/xClave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/IUsuarios/Eliminar" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

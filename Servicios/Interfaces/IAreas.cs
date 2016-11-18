@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using AccesoDatos;
-using Entidades;
 using System.ServiceModel;
-using System.ServiceModel.Web;
+using System.Text;
+using Entidades;
+using AccesoDatos;
 
 namespace Servicios
 {
     [ServiceContract]
-    interface IUsuarios
+    interface IAreas
     {
         [OperationContract]
-        void Nuevo(eUsuarios usuario);
+        void Nuevo(eAreas area);
 
         [OperationContract]
-        List<eUsuarios> Todos();
+        List<eAreas> Todas(int pId);
 
         [OperationContract]
-        eUsuarios xClave(string clave);
+        List<eAreas> xClave(int clave);
+
+        [OperationContract]
+        void Eliminar(int clave);
     }
 }

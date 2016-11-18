@@ -19,7 +19,45 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div ng-app="myApp" ng-controller="userController">
-        <table>
+        <div id="dNuevoUsuario">
+            <table id="tbNuevoUsuario">
+                <thead>
+                    <tr>
+                        <th colspan="5">Agregar Nuevo Usuario</th>
+                    </tr>
+                    <tr>
+                        <td>Cuenta</td>
+                        <td>Clave</td>
+                        <td>Nombre</td>
+                        <td>Area</td>
+                        <td>Telefono</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" ng-model="tCuenta" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="tClave" />
+                        </td>
+                        <td>
+                            <input type="text" ng-model="tNombre" />
+                        </td>
+                        <td>
+                            <select>
+                                <option value="1">PEMEX</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="tTelefono" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-primary" ng-click="Guarda_Usuario();"></button>
+        </div>
+        <table class="table table-striped table-condensed table-responsive table-bordered">
             <thead>
                 <tr>
                     <td>
@@ -51,7 +89,7 @@
                         {{usuario.Nombre}}
                     </td>
                     <td>
-                        
+                        {{usuario.Area}}
                     </td>
                     <td>
                         {{usuario.Telefono}}
@@ -59,7 +97,7 @@
                 </tr>
             </tbody>
         </table>
-    </div>>
+    </div>
     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 </asp:Content>
 

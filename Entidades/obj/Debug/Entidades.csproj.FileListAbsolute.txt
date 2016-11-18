@@ -1,7 +1,7 @@
 A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\Entidades.dll
 A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\Entidades.pdb
-A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\AccesoDatos.dll
-A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\AccesoDatos.pdb
 A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
 A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\obj\Debug\Entidades.dll
 A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\obj\Debug\Entidades.pdb
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\AccesoDatos.dll
+A:\TI-Desarrollo\Documentos\Aplicaciones\GINT\Entidades\bin\Debug\AccesoDatos.pdb

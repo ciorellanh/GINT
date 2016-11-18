@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cUsuarios.cs" />
+    <Compile Include="eAreas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="eUsuarios.cs" />
   </ItemGroup>
