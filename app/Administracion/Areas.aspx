@@ -19,8 +19,9 @@
     <div ng-app="myApp" ng-controller="areaController">
         <div ng-repeat="ar in lstASeleccionada"><label ng-model="lRuta" ng-bind="ar.Ruta_Texto"></label></div>
         Seleccione el área:
-        <select ng-model="Area" ng-change="Consultar();" ng-options="a.Descripcion for a in lstAreas track by u.Id" required="required">
-            
+        <select  ng-change="Consultar(Area);" ng-repeat="x in lstAreas" required="required" ng-model="Area">
+            <option value="">Selecciona un área...</option>
+            <option value="{{x.Id}}">{{x.Descripcion}}</option>
         </select>
         <br />
         <button type="button" ng-show="!vAreas" ng-model="bNuevaArea" ng-click="ShowHideNuevaArea();" class="btn btn-link">Agregar nueva área</button>
