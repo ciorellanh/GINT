@@ -1,6 +1,7 @@
 ﻿var app = angular.module('myApp', []);
 
 app.controller('areaController', function ($scope, $http) {
+    var valorArea=0;
     $scope.Area = '';
     $scope.UsuarioActual = function () {
         var httpreq = {
@@ -14,14 +15,14 @@ app.controller('areaController', function ($scope, $http) {
         }
         $http(httpreq).success(function (response) {
             $scope.lstUsuarios = response.d;
-            $scope.Area = $scope.lstUsuarios[0].IdArea;
-            alert($scope.lstUsuarios[0].IdArea);
+            valorArea = $scope.lstUsuarios[0].IdArea;
+            $scope.Consultar($scope.lstUsuarios[0].IdArea);
         })
     };
 
     
 
-    $scope.Dependencias = function () {
+    $scope.Dependencias = function (area) {
         var httpreq = {
             method: 'POST',
             url: 'Areas.aspx/Consultar_Todas',
@@ -29,14 +30,14 @@ app.controller('areaController', function ($scope, $http) {
                 'Content-Type': 'application/json; charset=utf-8',
                 'dataType': 'json'
             },
-            data: { pUbicacion: $scope.Area }
+            data: { pUbicacion: area }
         }
         $http(httpreq).success(function (response) {
             $scope.lstAreas = response.d;
         })
     };
 
-    $scope.AreaSeleccionada = function () {
+    $scope.AreaSeleccionada = function (area) {
         var httpreq = {
             method: 'POST',
             url: 'Areas.aspx/Consultar_xClave',
@@ -44,7 +45,7 @@ app.controller('areaController', function ($scope, $http) {
                 'Content-Type': 'application/json; charset=utf-8',
                 'dataType': 'json'
             },
-            data: { pClave: $scope.Area }
+            data: { pClave: area }
         }
         $http(httpreq).success(function (response) {
             $scope.lstASeleccionada = response.d;
@@ -78,14 +79,14 @@ app.controller('areaController', function ($scope, $http) {
         })
     };
 
-    $scope.Consultar = function () {
+    $scope.Consultar = function (area) {
 
-        $scope.Dependencias();
-        $scope.AreaSeleccionada();
+        $scope.Dependencias(area);
+        $scope.AreaSeleccionada(area);
     };
 
     $scope.UsuarioActual();
-    $scope.Consultar();
+    
 
     $scope.vAreas = false;
     $scope.ShowHideNuevaArea = function () {
